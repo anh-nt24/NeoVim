@@ -31,4 +31,7 @@ call plug#begin('~/.config/nvim/plugged')
   	
   	" {{ Suggestion }}
   	Plug 'neoclide/coc.nvim', {'branch': 'release'}
+	Plug 'windwp/nvim-autopairs'
+	Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+	Plug 'windwp/nvim-ts-autotag'
 call plug#end()

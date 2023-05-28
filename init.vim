@@ -12,6 +12,10 @@ endif
 
 source ~/.config/nvim/vim-plugs.vim
 
+" Load lua
+lua require('usr.nvim-autopairs')
+lua require('usr.nvim-treesitter')
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Basic Setup
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -29,6 +33,11 @@ set tabstop=4
 set softtabstop=0
 set shiftwidth=4
 set expandtab
+inoremap <expr> <cr> 
+   \   getline(".") =~ '\S\s*{$'                 ? "<bs><cr>{<cr>}<esc>O"
+   \ : getline('.') =~ '^\s*{$'                  ? "<cr>}<esc>O" 
+   \ : getline(".")[col(".")-2:col(".")-1]=="{}" ? "<cr><esc>O"
+   \ :                                             "<cr>"
 
 "" Map leader to ,
 let mapleader=','
