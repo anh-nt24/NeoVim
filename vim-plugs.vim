@@ -34,4 +34,6 @@ call plug#begin('~/.config/nvim/plugged')
 	Plug 'windwp/nvim-autopairs'
 	Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 	Plug 'windwp/nvim-ts-autotag'
+	Plug 'SirVer/ultisnips'                       " JSX snippet
+	Plug 'mlaursen/vim-react-snippets'	      " React snippet	
 call plug#end()
