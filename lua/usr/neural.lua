@@ -1,7 +1,7 @@
 require('neural').setup({
     source = {
         openai = {
-            api_key = "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",
+            api_key = "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",
         },
     },
 })

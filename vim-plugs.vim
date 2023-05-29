@@ -5,8 +5,9 @@ call plug#begin('~/.config/nvim/plugged')
 	" {{ File explore }}
 	Plug 'preservim/nerdtree'
 	Plug 'Xuyuanp/nerdtree-git-plugin'
-	Plug 'ryanoasis/vim-devicons'
-	Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
+	Plug 'ryanoasis/vim-devicons'                 " Icons
+	"Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
+	Plug 'unkiwii/vim-nerdtree-sync'              " Sync current file
 	
 	" {{ File search }}
 	if isdirectory('/usr/local/opt/fzf')

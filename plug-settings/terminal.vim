@@ -7,12 +7,9 @@ tnoremap   <silent>   <F9>    <C-\><C-n>:FloatermNext<CR>
 nnoremap   <silent>   <F12>   :FloatermToggle<CR>
 tnoremap   <silent>   <F12>   <C-\><C-n>:FloatermToggle<CR>
 
-" Open a new terminal 
-nnoremap <silent> <leader>to    :FloatermNew<CR>
 
 " Kill current terminal 
 nnoremap <silent> <leader>tk :FloatermKill<CR>:FloatermPrev<CR>
-tnoremap <silent> <leader>tk <C-\><C-n>:FloatermKill<CR>:FloatermPrev<CR>
 
 " Navigation next and previous terminal 
 nnoremap <silent> <leader>tn :FloatermNext<CR>
@@ -23,10 +20,6 @@ tnoremap <silent> <leader>tp <C-\><C-n>:FloatermPrev<CR>
 " Focus terminal 
 nnoremap <silent> <leader>tf <C-\><C-n><C-W><Left>
 tnoremap <silent> <leader>tf <C-\><C-n><C-W><Left>
-
-" Kill current terminal 
-nnoremap <silent> <leader>tk :FloatermKill<CR>:FloatermPrev<CR>
-tnoremap <silent> <leader>tk <C-\><C-n>:FloatermKill<CR>:FloatermPrev<CR>
 
 " Set floaterm window's background to black
 hi Floaterm guibg=white

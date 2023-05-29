@@ -20,17 +20,17 @@ lua require('usr.neural')
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Basic Setup
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"" Encoding
+" Encoding
 set encoding=utf-8
 set fileencoding=utf-8
 set fileencodings=utf-8
 set ttyfast
 let g:neural.ui.prompt_icon = ' >'
 
-"" Fix backspace indent
+" Fix backspace indent
 set backspace=indent,eol,start
 
-"" Tabs. May be overridden by autocmd rules
+" Tabs. May be overridden by autocmd rules
 set tabstop=4
 set softtabstop=0
 set shiftwidth=4
@@ -41,13 +41,7 @@ inoremap <expr> <cr>
    \ : getline(".")[col(".")-2:col(".")-1]=="{}" ? "<cr><esc>O"
    \ :                                             "<cr>"
 
-"" Map leader to ,
-let mapleader=','
-
-"" Enable hidden buffers
-set hidden
-
-"" Searching
+" Searching
 set hlsearch
 set incsearch
 set ignorecase

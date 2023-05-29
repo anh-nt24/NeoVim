@@ -1,5 +1,5 @@
-" Press F5 to toggle nerdTree
-map <silent> <F5> :NERDTreeToggle<CR>
+" Press \ to toggle nerdTree
+map <silent> <leader> :NERDTreeToggle<CR>
 
 " Exit Vim if NERDTree is the only window remaining in the only tab.
 autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() | quit | endif

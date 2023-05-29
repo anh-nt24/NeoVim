@@ -36,7 +36,7 @@ let g:fzf_colors = {
 
 " :Files
 command! -bang -nargs=? -complete=dir Files
-   \ call fzf#vim#files(<q-args>, {'options': ['--layout=reverse', '--info=inline', '--preview', 'bat --color=always --theme=TwoDark --style=header,numbers,snip --line-range :300 {}']}, <bang>0)
+   \ call fzf#vim#files(<q-args>, {'options': ['--layout=reverse', '--info=inline', '--preview', 'batcat --color=always --theme=TwoDark --style=header,numbers,snip --line-range :300 {}']}, <bang>0)
 map <F6> :Files<CR> 
 
 " ripgrep
