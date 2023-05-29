@@ -48,4 +48,5 @@ call plug#begin('~/.config/nvim/plugged')
   	Plug 'tpope/vim-rhubarb' 
   	Plug 'airblade/vim-gitgutter'                 " Git show changes 
   	Plug 'samoshkin/vim-mergetool'                " Git merge
+  	Plug 'APZelos/blamer.nvim'                    " Git lens
 call plug#end()
