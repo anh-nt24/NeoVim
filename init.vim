@@ -55,6 +55,10 @@ else
     set shell=/bin/sh
 endif
 
+" Search a hightlighted text
+vnoremap // y/\V<C-R>=escape(@",'/\')<CR><CR>
+nmap /\ :noh<CR>
+
 " Session management
 let g:session_directory = "~/./session"
 let g:session_autoload = "no"
@@ -86,6 +90,8 @@ autocmd FileChangedShellPost *
 syntax on
 set ruler
 set number
+set hidden
+set switchbuf=useopen,usetab
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Other Settings
