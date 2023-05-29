@@ -51,6 +51,6 @@ call plug#begin('~/.config/nvim/plugged')
   	Plug 'samoshkin/vim-mergetool'                " Git merge
   	Plug 'APZelos/blamer.nvim'                    " Git lens
     
-    " {{ Multiselect }}
-    Plug 'mg979/vim-visual-multi', {'branch': 'master'}
+    	" {{ Multiselect }}
+    	Plug 'mg979/vim-visual-multi', {'branch': 'master'}
 call plug#end()

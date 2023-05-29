@@ -1,0 +1,7 @@
+{
+    "coc.source.file.shortcut": "File",
+    "coc.source.around.shortcut": "?",
+    "suggest.noselect": true,
+    "python.linting.pylintEnabled": true,
+    "python.linting.enabled": true
+}
