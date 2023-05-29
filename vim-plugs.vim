@@ -32,8 +32,20 @@ call plug#begin('~/.config/nvim/plugged')
   	" {{ Suggestion }}
   	Plug 'neoclide/coc.nvim', {'branch': 'release'}
 	Plug 'windwp/nvim-autopairs'
+	Plug 'preservim/nerdcommenter'
 	Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 	Plug 'windwp/nvim-ts-autotag'
 	Plug 'SirVer/ultisnips'                       " JSX snippet
-	Plug 'mlaursen/vim-react-snippets'	      " React snippet	
+	Plug 'mlaursen/vim-react-snippets'	      " React snippet
+	
+	" {{ Code generation }}
+	Plug 'dense-analysis/neural'
+    	Plug 'MunifTanjim/nui.nvim'
+    	Plug 'ElPiloto/significant.nvim'
+    	
+    	" {{ Git }}
+    	Plug 'tpope/vim-fugitive'                     " Git infomation 
+  	Plug 'tpope/vim-rhubarb' 
+  	Plug 'airblade/vim-gitgutter'                 " Git show changes 
+  	Plug 'samoshkin/vim-mergetool'                " Git merge
 call plug#end()

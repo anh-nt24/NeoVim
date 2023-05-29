@@ -15,6 +15,7 @@ source ~/.config/nvim/vim-plugs.vim
 " Load lua
 lua require('usr.nvim-autopairs')
 lua require('usr.nvim-treesitter')
+lua require('usr.neural')
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Basic Setup
@@ -24,6 +25,7 @@ set encoding=utf-8
 set fileencoding=utf-8
 set fileencodings=utf-8
 set ttyfast
+let g:neural.ui.prompt_icon = ' >'
 
 "" Fix backspace indent
 set backspace=indent,eol,start
@@ -97,3 +99,8 @@ set number
 for setting_file in split(glob(stdpath('config').'/plug-settings/*.vim'))
   execute 'source' setting_file
 endfor
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Define Mappings
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+source ~/.config/nvim/maps.vim
