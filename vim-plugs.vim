@@ -1,4 +1,4 @@
-call plug#begin('~/.config/nvim/plugged')
+call plug#begin(stdpath('config').'/plugged')
 	" {{ Theme }}
 	Plug 'navarasu/onedark.nvim'
 	

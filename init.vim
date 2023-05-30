@@ -3,14 +3,22 @@
 " => VimPlug for managing Plugins
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " auto-install vim-plug
-if empty(glob('~/.config/nvim/autoload/plug.vim'))
-  silent !curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs
-    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-  "autocmd VimEnter * PlugInstall
-  "autocmd VimEnter * PlugInstall | source $MYVIMRC
+if empty(glob(stdpath('config') . '/autoload/plug.vim'))
+  if has('win32') || has('win64')
+    silent !powershell -NoProfile -Command "Invoke-WebRequest -Uri 'https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim' -OutFile $HOME/vimfiles/autoload/plug.vim"
+  else
+    silent !curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs
+      \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  endif
+  autocmd VimEnter * PlugInstall | source $MYVIMRC
 endif
 
-source ~/.config/nvim/vim-plugs.vim
+if has('win32') || has('win64')
+  source $HOME/vimfiles/vim-plugs.vim
+else
+  source ~/.config/nvim/vim-plugs.vim
+endif
+
 
 " Load lua
 lua require('usr.nvim-autopairs')
@@ -25,7 +33,13 @@ set encoding=utf-8
 set fileencoding=utf-8
 set fileencodings=utf-8
 set ttyfast
+
+" Current line
+set cursorline
+
+" Neural config
 let g:neural.ui.prompt_icon = ' >'
+
 
 " Fix backspace indent
 set backspace=indent,eol,start
@@ -96,11 +110,14 @@ set switchbuf=useopen,usetab
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Other Settings
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-for setting_file in split(glob(config').'/plug-settings/*.vim'))
+for setting_file in split(glob(stdpath('config').'/plug-settings/*.vim'))
   execute 'source' setting_file
 endfor
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Define Mappings
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-source ~/.config/nvim/maps.vim
+let g:maps_file = stdpath('config') . '/maps.vim'
+if filereadable(g:maps_file)
+  execute 'source' g:maps_file
+endif
