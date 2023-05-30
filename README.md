@@ -16,6 +16,9 @@ Feel free to fork and customize it according to your needs. :computer:
 
 ## Introduction 📋
 
+![image](https://github.com/anh-nt24/NeoVim/assets/106876168/7980e3cc-f900-4c80-adf1-1dca150ded8f)
+
+
 Some key aspects of my NeoVim configuration are:
 
 - **Vim Plugin Manager:** I use [vim-plug](https://github.com/junegunn/vim-plug) as my plugin manager. It provides a simple and efficient way to manage and install plugins for NeoVim. 🧩
@@ -119,7 +122,7 @@ Here are some common key mappings in NeoVim that you may find useful:
   - Accept completion: `Enter` ⏎
  
 **Terminal:**
-  - Open new terminal: `F7` 💻
+  - Open new terminal: `Alt + t` 💻
   - Navigate previous terminal: `F8` 🔼
   - Navigate next terminal: `F9` 🔽
   - Toggle terminal: `F12` 🔄
