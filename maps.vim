@@ -93,3 +93,6 @@ inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm()
 " Formatting selected code.
 xmap <leader>f  <Plug>(coc-format-selected)
 nmap <leader>f  <Plug>(coc-format-selected)
+
+" Symbol renaming.
+nmap <leader>rn <Plug>(coc-rename)
