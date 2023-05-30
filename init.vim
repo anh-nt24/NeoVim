@@ -96,7 +96,7 @@ set switchbuf=useopen,usetab
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Other Settings
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-for setting_file in split(glob(stdpath('config').'/plug-settings/*.vim'))
+for setting_file in split(glob(config').'/plug-settings/*.vim'))
   execute 'source' setting_file
 endfor
 
