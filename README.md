@@ -9,10 +9,10 @@ Feel free to fork and customize it according to your needs. :computer:
 
 ## Table of Contents :book:
 
-1. [Introduction](#introduction)
-2. [Requirements](#requirements)
-3. [Installation](#installation)
-4. [Cheatsheet](#cheatsheet)
+1. [Introduction](#introduction-)
+2. [Requirements](#requirements-heavy_check_mark)
+3. [Installation](#installation-gear)
+4. [Cheatsheet](#cheatsheet-%EF%B8%8F)
 
 ## Introduction 📋
 
